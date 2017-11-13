@@ -40,6 +40,8 @@ public class App
         message.setPayload("Security, the cat has opened the window".getBytes());
         publisher.publish("home/security", message);
 
+        Thread.sleep(500);
+
         publisher.disconnect();
         superSubscriber.disconnect();
         temperatureSubscriber.disconnect();
